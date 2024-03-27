@@ -6,7 +6,8 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: ''
-
+    server:
+      port: 8081
   h2:
     console:
       enabled: true

@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public class ChampionsJdbcRepository implements ChampionsRepository {
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
     private final RowMapper<Champions> rowMapper;
 
     public ChampionsJdbcRepository(JdbcTemplate jdbcTemplate) {
