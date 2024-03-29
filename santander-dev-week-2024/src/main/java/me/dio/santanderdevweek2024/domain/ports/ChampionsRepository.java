@@ -7,5 +7,6 @@ import java.util.Optional;
 
 public interface ChampionsRepository {
     List<Champions> findAll();
+
     Optional<Champions> findByID(Long id);
 }
