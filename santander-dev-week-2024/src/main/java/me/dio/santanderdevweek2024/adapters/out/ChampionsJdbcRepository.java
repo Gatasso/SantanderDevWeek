@@ -25,11 +25,13 @@ public class ChampionsJdbcRepository implements ChampionsRepository {
         ));
     }
 
+    //método que consulta no DB todos os campeões
     @Override
     public List<Champions> findAll() {
         return jdbcTemplate.query("SELECT * FROM CHAMPIONS", rowMapper);
     }
 
+    //método que busca no DB especificamente um campeão
     @Override
     public Optional<Champions> findByID(Long id) {
         String sql = "SELECT * FROM CHAMPIONS WHERE ID = ?";

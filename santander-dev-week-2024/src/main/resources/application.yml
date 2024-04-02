@@ -11,3 +11,12 @@ spring:
   h2:
     console:
       enabled: true
+
+#Provedores de IA
+openai:
+  base-url: https://api.openai.com
+  api-key: ${OPENAI_API_KEY}                    #variável de ambiente = "${}"
+
+gemini:
+  base-url: https://generativelanguage.googleapis.com
+  api-key: ${GEMINI_API_KEY}

@@ -17,7 +17,6 @@ public record AskChampionsRestController(AskChampionsUseCase useCase) {
     public AskChampionResponse askChampion(@PathVariable Long championId, @RequestBody AskChampionRequest request) {
 
         String answer = useCase.askChampion(championId, request.question());
-
         return new AskChampionResponse(answer);
     }
 
